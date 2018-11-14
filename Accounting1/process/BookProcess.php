@@ -3,11 +3,11 @@ include "../config/database.php";
 if (isset($_GET['action']) && $_GET['action']=="insert") {
   $date = $_POST['date'];
   $detail = $_POST['detail'];
-  $acc_num = $_POST['acc_num'];
+  $acc_id = $_POST['acc_id'];
   $cost = $_POST['cost'];
   $status = $_POST['status'];
-  $sql = "INSERT INTO `tb_book` (`id`, `date`, `detail`, `acc_num`, `cost`, `status`)
-              VALUES (NULL, '$date', '$detail', '$acc_num', '$cost', '$status')";
+  $sql = "INSERT INTO `tb_book` (`id`, `date`, `detail`, `acc_id`, `cost`, `status`)
+              VALUES (NULL, '$date', '$detail', '$acc_id', '$cost', '$status')";
   $result = mysqli_query($conn , $sql);
   header("location: ../index.php");
 }

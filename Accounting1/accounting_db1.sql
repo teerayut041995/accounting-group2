@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2018 at 04:11 AM
+-- Generation Time: Nov 14, 2018 at 05:58 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -63,8 +63,9 @@ CREATE TABLE `tb_book` (
 --
 
 INSERT INTO `tb_book` (`id`, `date`, `detail`, `acc_id`, `cost`, `status`) VALUES
-(1, '2018-10-30', 'detail', 0, '0.00', 'status'),
-(2, '2018-10-30', 'เงินสด', 101, '1000.00', 'debit');
+(3, '2018-11-01', '', 1, '800000.00', 'debit'),
+(4, '2018-11-15', '', 1, '5000.00', 'debit'),
+(5, '2018-11-14', '', 5, '1000.00', 'debit');
 
 --
 -- Indexes for dumped tables
@@ -97,7 +98,7 @@ ALTER TABLE `tb_account_number`
 -- AUTO_INCREMENT for table `tb_book`
 --
 ALTER TABLE `tb_book`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
