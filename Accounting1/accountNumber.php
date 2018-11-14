@@ -22,7 +22,7 @@ include "config/database.php";
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="accountNumber.php">เพิ่มหมายเลขบัญชี <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -49,37 +49,46 @@ include "config/database.php";
         </div>
       </nav>
     </header>
-
+    <br>
     <div class="container">
-      <form method="post" action="process/BookProcess.php?action=insert">
-        <div class="form-group">
-          <label>วันที่</label>
-          <input type="date" class="form-control" name="date" required>
-        </div>
+      <form method="post" action="process/accountNumberProcess.php?action=insert">
         <div class="form-group">
           <label>รายการ</label>
-            <input type="text" class="form-control" name="detail">
+            <input type="text" class="form-control" name="list" required>
         </div>
         <div class="form-group">
           <label>เลขที่บัญชี</label>
-            <input type="text" class="form-control" name="acc_num">
-        </div>
-        <div class="form-group">
-          <label>จำนวนเงิน</label>
-            <input type="text" class="form-control" name="cost">
-        </div>
-        <div class="form-group">
-          <label>ประเภท</label>
-          <select class="form-control" name="status">
-            <option value="">ประเภท</option>
-            <option value="debit">เดบิต</option>
-            <option value="credit">เครดิต</option>
-          </select>
+            <input type="text" class="form-control" name="acc_number" required>
         </div>
         <button type="submit" class="btn btn-primary">บันทึก</button>
         <button type="reset" class="btn btn-danger">ล้างฟอร์ม</button>
       </form>
     </div>
+    <br>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <th>เลขบัญชี</th>
+            <th>รายการ</th>
+          </tr>
+          <?php
+          $sql = "SELECT * FROM tb_account_number";
+          $result = mysqli_query($conn,$sql);
+          while ($data = mysqli_fetch_array($result)) {
+          ?>
+          <tr>
+            <td><?php echo $data['acc_number']; ?></td>
+            <td><?php echo $data['list']; ?></td>
+          </tr>
+          <?php
+          }
+          ?>
+
+        </table>
+      </div>
+    </div>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="bootstrap/js/jquery-3.3.1.slim.min.js" ></script>
