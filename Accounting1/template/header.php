@@ -12,6 +12,9 @@
       <li class="nav-item">
         <a class="nav-link" href="index.php">บันทึกบัญชี</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="general-book.php">สมุดรายวันทั่วไป</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown

@@ -99,7 +99,7 @@ include "config/database.php";
             <td><?php echo $data['detail'];?></td>
             <td>
               <a href="#" class="btn btn-success btn-sm">แก้ไข</a>
-              <a href="#" class="btn btn-danger btn-sm">ลบ</a>
+              <a href="process/BookProcess.php?action=delete&id=<?php echo $data['id']; ?>" onclick="return confirm('ต้องการลบข้อมูลหรือไม่?')" class="btn btn-danger btn-sm">ลบ</a>
             </td>
           </tr>
           <?php
