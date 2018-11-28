@@ -15,6 +15,9 @@
       <li class="nav-item">
         <a class="nav-link" href="general-book.php">สมุดรายวันทั่วไป</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ledger.php">แยกประเภท</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
